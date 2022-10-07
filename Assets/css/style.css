@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    width: 100%;
+   
+    
+}
+
+ul{
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: smaller;  
+}
+a:hover{
+    color: antiquewhite;
+}
+
+h1,
+h2{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+h6{
+   font-weight: 300;
+   line-height: 1; 
+   margin: 5px 0;
+   text-align: center;
+   font-size:x-small;
+}
+.flash{
+    background-color: red;
+    font-weight: 100;
+}
+p {
+    margin: 10px 0;
+}
+
+img{
+    width: 100%;
+}
+.navbar{
+    background-color: #047aed;
+    color: bisque;
+    height: 70px;
+  
+}
+
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar a{
+    color: #fff;
+    padding: 10px;
+    /* setting the margin at 0 for top and bottom and 10px for left and right.*/
+    margin: 0 10px;
+}
+
+.navbar a:hover{
+    border-bottom: 2px #fff solid;
+    color:antiquewhite;
+
+}
+.navbar .flex{
+    justify-content: space-between;
+}
+
+
+.forms-control{
+    margin: 10px;
+}
+.btn{
+  border-radius: 7px; 
+  cursor:pointer;
+  padding: 5px; 
+  width: 60px;
+  background-color: black;
+  color: #fff;
+}
+.btn:hover{
+    transform: scale(0.98)
+}
+
+
+.products .container{
+    
+    flex-wrap: wrap;
+}
+.products .card1{
+    text-align: center;
+    /* This makes the transform in hover effect more effective */
+    transition: transform 0.2s ease-in;
+}
+.products .card-1{
+    transition: transform 0.2s ease-in;
+}
+
+/* .products .card1 a{
+    font-size: medium;
+    margin-bottom: 10px;
+} */
+
+.products .card1:hover{
+    /* it makes the image move a bit up when hover upon. Positive will move it down */
+    transform: translateY(-5px);
+}
+
+.showcase{
+    height: 100%;
+    width: 100%;
+    padding-top: 10px;
+    position: relative;
+    background-color: #047aed;
+    
+}
+
+.showcase-nav{
+    /* border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0.1, 0.1, 0.1, 0.1); */
+    padding: 5px;
+    margin: 10px;
+    width: 35%;
+    height: 100%;
+    /* position: relative; */
+}
+
+.showcase::before,
+.showcase::after{
+    content: '';
+    position: absolute;
+    height: 35px;
+    bottom: 3px;
+    right: 0;
+    left: 0;
+    background:#047aed;
+    transform: skewY(-2.5deg);
+    /* for chrome and safari view */
+    -webkit-transform: skewY(-2.5deg);
+    /* for mozilla view */
+    -moz-transform: skewY(-2.5deg);
+    /* for microsoft browser */
+    -ms-transform: skewY(-2.5deg);
+    
+}
+
+
+.showcase-text h2{
+    text-align: center;
+    margin: 40px;
+    color:#047aed;
+    font-size: 70px;
+    
+
+}
+.center{
+    margin-bottom: 300px;
+}
+
+.my-1 .card-1{
+    width: 30%;
+   
+} 
+
+.my-2 img{
+    height: 85%;
+}
+
+.login{
+    margin-bottom: 220px;
+    
+}
+
+footer{
+    background: #002240;
+    color: #fff;
+    
+       
+}
+.footer-nav{
+    gap: 20px;
+    margin-left: 50px;
+    
+}
+footer a{
+    color: #fff;
+}
+
+
+
+/* Tablets and under */
+@media(max-width: 768px){
+    /* we want to stack everything to just one columns */
+/* .grid,
+.showcase .grid */
+ /* in addittion we say: */
+
+/* {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+} */
+
+.grid {
+    display: grid;
+}
+
+.showcase{
+    /* since we aill be having smaller screen we set height to auto  */
+    height:auto;
+}
+.showcase-text{
+    text-align: center;
+    margin-top: 40px;
+    
+  
+}
+.showcase-form{
+    justify-self: center;
+}
+.showcase::before,
+.showcase::after{
+
+height: 20px;
+
+
+}
+
+}
+
+
+@media(max-width:500px){
+    .navbar{
+        /* this will make the menu items go under the logo */
+        height: 100%;
+        
+    }
+
+    .navbar .flex{
+        flex-direction: column;
+    }
+   
+    .navbar ul{
+    display: grid
+    }
+
+    .showcase::before,
+    .showcase::after{
+    height: 20px;
+  
+    }
+    
+    .showcase-text ul
+    {
+        display: grid;
+        margin:50px;      
+        
+    }
+    .showcase-text h2{
+  
+    font-size: 25px;
+    
+
+}
+   .login .card{
+    width: 250px;
+   }
+   .register .card{
+    width: 250px;
+   }
+
+   
+   
+
+}
